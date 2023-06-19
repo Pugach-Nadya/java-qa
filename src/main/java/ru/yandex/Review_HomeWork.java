@@ -34,10 +34,7 @@ public class Review_HomeWork {
         return false;
     }
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Привет, введи четерех значное число \n");
-        String st = in.nextLine();
+    public static void main(String st) {
         boolean p = checkString(st);
         if (p == true) {
             int a = Integer.parseInt(st);
