@@ -32,4 +32,103 @@ public class Review_HomeWorkTest {
         String expected= "Вы ввели пустую строку!";
         Assertions.assertEquals(expected, actually);
     }
+// проверка тестами второй функции
+    @Test//проверка нна пустую строку
+    void TestCheckDifferenceNull()
+    {
+        String actually = Review_HomeWork.difference(null);
+        String expected= "Вы ввели пустую строку!";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//проверка на ноль
+    void TestCheckDifferenceEqual0()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(0));
+        String expected= "Вы ввели отрицательное число!";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//цифры меньше нуля - отрицательные
+    void TestCheckDifferenceUnder0()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(-1));
+        String expected= "Вы ввели отрицательное число!";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//цифры меньше 10 но больше 0
+    void TestCheckDifferenceUnder10()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(9));
+        String expected= "Вы ввели не число меньше 10!";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//проверка что число меньше 9999
+    void TestCheckDifferenceMore9999()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(9));
+        String expected= "Вы ввели не число больше 9999!";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//двухзначные - цифры с 12, 13 до 19 где после разделения часть1 меньше части 2
+    void TestCheckDifference2Part1UnderPart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(12));
+        String expected= "Итоговое число = -9";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test //двухзначные - две одинаковые цифры в двоичном числе
+    void TestCheckDifference2IdenticalNumber()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(22));
+        String expected= "Итоговое число = 0";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test //двухзначные - цифры, где после разделения часть1 больше части 2
+    void TestCheckDifference2Part1MorePart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(21));
+        String expected= "Итоговое число = 9";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//трехзначные - цифры, где после разделения часть1 меньше части 2
+    void TestCheckDifference3Part1UnderPart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(121));
+        String expected= "Итоговое число = -9";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test //трехзначные - цифры, где после разделения часть1 = части 2
+    void TestCheckDifference3Part1EqualPart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(222));
+        String expected= "Итоговое число = 0";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test //трехзначные - цифры, где после разделения часть1 больше части 2
+    void TestCheckDifference3Part1MorePart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(212));
+        String expected= "Итоговое число = 9";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test//четырехзначные- цифры, где после разделения часть1 меньше части 2
+    void TestCheckDifference4Part1UnderPart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(1099));
+        String expected= "Итоговое число = -89";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test //четырехзначные - цифры, где после разделения часть1 = части 2
+    void TestCheckDifference4Part1EqualPart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(2222));
+        String expected= "Итоговое число = 0";
+        Assertions.assertEquals(expected, actually);
+    }
+    @Test //четырехзначные - цифры, где после разделения часть1 больше части 2
+    void TestCheckDifference4Part1MorePart2()
+    {
+        String actually = Review_HomeWork.difference(String.valueOf(9998));
+        String expected= "Итоговое число = 1";
+        Assertions.assertEquals(expected, actually);
+    }
 }
