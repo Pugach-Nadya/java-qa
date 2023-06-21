@@ -1,5 +1,6 @@
 package ru.yandex;
 
+//итоговое решение задачи 1 + тесты отдельно
 public class Review_HomeWork {
     public static String reverse (String st)
     {
@@ -27,6 +28,7 @@ public class Review_HomeWork {
         }
     }
 
+    //итоговое решение задачи 2 - исправила и задачу и АТ
     public static String difference (String st)
     {
         if (st == null)
