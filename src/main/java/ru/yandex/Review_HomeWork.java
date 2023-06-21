@@ -36,12 +36,13 @@ public class Review_HomeWork {
         }
         try {
             int a = Integer.parseInt(st);
-            if (a < 0 && a==0)
+            char first = st.charAt(0);
+            if (first == '-')
             {
                 String finalSt = ("Вы ввели отрицательное число!");
                 return finalSt;
             }
-            if (a < 10 && a>0)
+            if (a < 10 && a>=0)
             {
                 String finalSt = ("Вы ввели не число меньше 10!");
                 return finalSt;
@@ -55,7 +56,7 @@ public class Review_HomeWork {
             {
                 int a1 = (int) a / 10;
                 int a2 = a % 10;
-                String part2 = String.valueOf((a2 + a1));
+                String part2 = String.valueOf(""+a2 +""+ a1);
                 int result = a - Integer.parseInt(part2);
                 String finalSt = ("Итоговое число = " + result);
                 return finalSt;
@@ -81,7 +82,6 @@ public class Review_HomeWork {
             String finalSt = ("Вы ввели не целое число!");
             return finalSt;
         }
-    } //так и не поняла почему ему не нравится эта скобка(( нужен хелп
-    public static void main(String st) {
+        return ("Неизвестная ошибка");
     }
 }

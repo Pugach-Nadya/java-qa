@@ -44,7 +44,7 @@ public class Review_HomeWorkTest {
     void TestCheckDifferenceEqual0()
     {
         String actually = Review_HomeWork.difference(String.valueOf(0));
-        String expected= "Вы ввели отрицательное число!";
+        String expected= "Вы ввели не число меньше 10!";
         Assertions.assertEquals(expected, actually);
     }
     @Test//цифры меньше нуля - отрицательные
@@ -64,7 +64,7 @@ public class Review_HomeWorkTest {
     @Test//проверка что число меньше 9999
     void TestCheckDifferenceMore9999()
     {
-        String actually = Review_HomeWork.difference(String.valueOf(9));
+        String actually = Review_HomeWork.difference(String.valueOf(10000));
         String expected= "Вы ввели не число больше 9999!";
         Assertions.assertEquals(expected, actually);
     }
