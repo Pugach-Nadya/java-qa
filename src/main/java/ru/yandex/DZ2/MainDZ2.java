@@ -18,5 +18,5 @@ public class MainDZ2 {
           .withX(11).withY(11).withZ(0).withZone("SORT").bulder();
   Lot zLot = new Lot().withSerialKey(zSku).withSku(zSku).getQuantityLot(3);
   SerialInventory zSI = new SerialInventory().withSerialKey(zSku)
-          .withLot(zLot).withLoc(zLoc).withQuantitySI(3).builder();
+          .withLot(zLot).withLoc(zLoc).withQuantitySI(3).builder(); //что с объектом дальше делаем?
 }
