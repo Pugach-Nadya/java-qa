@@ -28,6 +28,7 @@ public class SerialInventory {
         this.quantity = Q;
         return this;
     }
+    public SerialInventory(){}
     private SerialInventory (long SK, SKU S, Lot LT, Loc LC, long Q){
         this.serialKey = SK;
         this.sku = S;

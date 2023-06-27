@@ -6,19 +6,13 @@ public class Lot {
     private SKU sku;
     private long quantity;
 
-    public Lot withSerialKey(SKU S) {
-        this.serialKey = S.getSerialKey();
-        return this;
-    }
-
-    public Lot withSku(SKU S) {
-        this.sku = S;
-        return this;
-    }
-
-    public Lot withQuantity(long q) {
-        this.quantity = q;
-        return this;
+    public Lot (long SK, SKU sku,long Q){
+        this.serialKey = SK;
+        this.sku = sku;
+        this.quantity = Q;
+        System.out.println("serialKey = "+getSerialKey());
+        System.out.println("SKU = "+getSku());
+        System.out.println("quantity = "+getQuantity());
     }
 
     public long getSerialKey() {
@@ -29,7 +23,7 @@ public class Lot {
         return sku;
     }
 
-    public long getQuantityLot() {
+    public long getQuantity() {
         return quantity;
     }
 }

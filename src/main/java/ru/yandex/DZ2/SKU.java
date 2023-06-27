@@ -3,42 +3,39 @@ package ru.yandex.DZ2;
 //Sku: serialKey(long), storerKey(long), description(String)
 public class SKU {
 
-    private long serialKey;
+    public long serialKey;
     private long storerKey;
     private  String description;
 
-    public SKU withSerialKey(long SK) {
+    public SKU(long SK, long S, String D){
         this.serialKey = SK;
-        return this;
-    }
-
-    public SKU withStorerKey(long STK) {
-        this.storerKey = STK;
-        return this;
-    }
-    public SKU withDescription(String D) {
+        this.storerKey = S;
         this.description = D;
-        return this;
-    }
-    //пробовала и с приват и с паблик, но при создании объекта ругается(
-    public SKU (long SK, long STK, String D) {
-        this.serialKey = SK;
-        this.storerKey = STK;
-        this.description = D;
-    }
-    public SKU bulder(){
-        return new SKU(serialKey, storerKey, description);
+        System.out.println("serialKey = "+getSerialKey());
+        System.out.println("storerKey = "+getStorerKey());
+        System.out.println("description = "+getDescription());
     }
 
     public long getSerialKey() {
-        return serialKey;
+        return this.serialKey;
     }
-
     public long getStorerKey() {
         return storerKey;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public void setSerialKey(long serialKey) {
+        this.serialKey = serialKey;
+    }
+
+    public void setStorerKey(long storerKey) {
+        this.storerKey = storerKey;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

@@ -13,48 +13,7 @@ public class Loc {
     private int z;
     private String zone;
 
-    public Loc withSerialKey(SKU S) {
-        this.serialKey = S.getSerialKey();
-        return this;
-    }
-    public Loc withName (String N){
-        this.name = N;
-        return this;
-    }
-
-    public Loc withLength (double L){
-        this.length = L;
-        return this;
-    }
-
-    public Loc withWidth (double W){
-        this.width = W;
-        return this;
-    }
-    public  Loc withHeight (double H){
-        this.height = H;
-        return this;
-    }
-
-    public  Loc withX (int X){
-        this.x = X;
-        return this;
-    }
-    public  Loc withY (int Y){
-        this.y = Y;
-        return this;
-    }
-    public  Loc withZ (int Z){
-        this.z = Z;
-        return this;
-    }
-
-    public Loc withZone (String ZN){
-        this.zone = ZN;
-        return this;
-    }
-
-    private Loc (long SK,String N,double L,double W,double H,int X, int Y,int Z,String ZN){
+    public Loc (long SK,String N,double L,double W,double H,int X, int Y,int Z,String ZN){
         this.serialKey = SK;
         this.name = N;
         this.length = L;
@@ -64,9 +23,15 @@ public class Loc {
         this.y = Y;
         this.z = Z;
         this.zone = ZN;
-    }
-    public Loc bulder(){
-        return new Loc(serialKey,name,length,width,height, x, y, z, zone);
+        System.out.println("serialKey = "+getSerialKey());
+        System.out.println("name = "+getName());
+        System.out.println("length = "+getLength());
+        System.out.println("windth = "+getWidth());
+        System.out.println("heigth = "+getHeight());
+        System.out.println("x = "+getX());
+        System.out.println("y = "+getY());
+        System.out.println("z = "+getZ());
+        System.out.println("zone = "+getZone());
     }
 
     public long getSerialKey() {
