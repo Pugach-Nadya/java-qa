@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 import ru.yandex.Lesson3.DZ3;
 
 public class TestDZ3 {
-    @Test
     @ParameterizedTest( name = "{index}Треугольник h = {0} и size = {1}")
     @CsvSource({
             "1,1",
@@ -17,8 +16,6 @@ public class TestDZ3 {
    void testprintTriangleTrue(int h, int size){
         DZ3.printTriangle2(h,size);
     }
-
-    @Test
     @ParameterizedTest( name = "{index}Треугольник h = {0} и size = {1} ошибка")
     @CsvSource({
             "0,1",
